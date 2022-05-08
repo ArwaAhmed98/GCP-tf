@@ -1,9 +1,8 @@
 resource "google_compute_router" "router" {
   name    = "my-router"
   network = google_compute_network.vpc_net.id
-  bgp {
-    asn = 64514
-  }
+
+ 
 }
 
 resource "google_compute_router_nat" "nat" {
@@ -16,8 +15,5 @@ resource "google_compute_router_nat" "nat" {
     name                    = google_compute_subnetwork.managment-subnetwork.id
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
   }
-  #   log_config {
-  #     enable = true
-  #     filter = "ERRORS_ONLY" # send only the errors to the logs
-  #   }
+
 }

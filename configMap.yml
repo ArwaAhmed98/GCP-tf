@@ -16,12 +16,12 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: redis-cluster
+  name: cm
 data:
   ENVIRONMENT: "DEV"
   HOST: "localhost"
-  PORT: 8000
-  REDIS_HOST: "MVC"
+  PORT: "8000"
+  REDIS_HOST: "mvc"
   REDIS_PORT: "6379"
   REDIS_DB: "0"
     
