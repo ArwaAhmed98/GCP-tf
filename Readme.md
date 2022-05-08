@@ -12,7 +12,7 @@
 * the deployment is donr manually using kubectl
 * cluster is built using Terraform in `cluster.tf`
 * the cluster control plane is accessed by the private VM ` restircted-subnet `
-### steps of deployemnt:
+### steps of deployment:
 `NOTE: you can either run deploy.sh bash file on your privateVM or run manually each command `
 * create the ConfigMap , it contains the configuration vars needed by the applciation
   Run ` kubectl apply -f configMap.yml` on the VM
