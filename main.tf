@@ -12,9 +12,8 @@ terraform {
   }
 }
 provider "google" {
-    credentials = file("/home/arwa/.config/gcloud/application_default_credentials.json")
+  credentials = file("/home/arwa/.config/gcloud/application_default_credentials.json")
   project     = "arwa-348512"
   region      = var.region
-  # zone    = "us-east1-b"
 }
 

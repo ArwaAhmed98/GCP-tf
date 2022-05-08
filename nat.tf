@@ -2,7 +2,7 @@ resource "google_compute_router" "router" {
   name    = "my-router"
   network = google_compute_network.vpc_net.id
 
- 
+
 }
 
 resource "google_compute_router_nat" "nat" {

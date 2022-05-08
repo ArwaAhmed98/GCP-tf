@@ -6,9 +6,9 @@ resource "google_container_cluster" "primary" {
   initial_node_count       = 1
   network                  = google_compute_network.vpc_net.id
   subnetwork               = google_compute_subnetwork.restricted-subnetwork.id
-  ip_allocation_policy {
-  #   cluster_secondary_range_name  = "k8s-pod-range"     #pods
-  #   services_secondary_range_name = "k8s-service-range" #cluster-ips
+  ip_allocation_policy { #lazem tb2a mwgoda w fdya 3shan yt3mlha enableeeeeeee
+    #   cluster_secondary_range_name  = "k8s-pod-range"     #pods
+    #   services_secondary_range_name = "k8s-service-range" #cluster-ips
   }
 
   private_cluster_config {
@@ -17,7 +17,7 @@ resource "google_container_cluster" "primary" {
     master_ipv4_cidr_block  = "192.168.1.0/28"
   }
 
-  
+
   master_authorized_networks_config {
     cidr_blocks {
       cidr_block   = var.public_sub_cidr

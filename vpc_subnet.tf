@@ -15,12 +15,4 @@ resource "google_compute_subnetwork" "restricted-subnetwork" {
   name          = "restrictedsubnet-tf"
   ip_cidr_range = var.private_sub_cidr #k8s nodes use primary range
   network       = google_compute_network.vpc_net.id
-  #   secondary_ip_range {
-  #   range_name    = "k8s-pod-range"
-  #   ip_cidr_range = "10.48.0.0/14"
-  # }
-  # secondary_ip_range {
-  #   range_name    = "k8s-service-range"
-  #   ip_cidr_range = "10.52.0.0/20"
-  # }
 }
